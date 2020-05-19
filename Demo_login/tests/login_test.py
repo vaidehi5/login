@@ -17,7 +17,7 @@ class TestLogin():
         lp.enter_username(util.USERNAME)
         lp.enter_password(util.PASSWORD)
         lp.click_login()
-    def test_logout(self):
+    def test_logout(self, test_login):
         try:
             driver = self.driver
             hp = homepage(driver)
