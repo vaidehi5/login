@@ -8,7 +8,7 @@ from utils import utils as util
 import allure
 import conftest
 
-@pytest.mark.usefixtures(conftest.test_setup)
+@pytest.mark.usefixtures('test_setup')
 class TestLogin():
     def test_login(self):
         driver = self.driver
