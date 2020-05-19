@@ -6,6 +6,8 @@ from pages.loginpage import loginpage
 from pages.homepage import homepage
 from utils import utils as util
 import allure
+from conftest import test_setup
+
 import conftest
 
 @pytest.mark.usefixtures('test_setup')
@@ -17,7 +19,7 @@ class TestLogin():
         lp.enter_username(util.USERNAME)
         lp.enter_password(util.PASSWORD)
         lp.click_login()
-    def test_logout(self, test_login):
+    def test_logout(self):
         try:
             driver = self.driver
             hp = homepage(driver)
