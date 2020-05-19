@@ -10,15 +10,13 @@ import conftest
 
 @pytest.mark.usefixtures('test_setup')
 class TestLogin():
-    def test_login(self):
+    def test_login(self, test_setup):
         driver = self.driver
         driver.get(util.URL)
         lp = loginpage(driver)
         lp.enter_username(util.USERNAME)
         lp.enter_password(util.PASSWORD)
         lp.click_login()
-
-    @pytest.mark.usefixtures('test_setup')
     def test_logout(self):
         try:
             driver = self.driver
