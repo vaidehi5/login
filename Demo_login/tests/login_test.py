@@ -17,6 +17,8 @@ class TestLogin():
         lp.enter_username(util.USERNAME)
         lp.enter_password(util.PASSWORD)
         lp.click_login()
+
+    @pytest.mark.usefixtures('test_setup')
     def test_logout(self):
         try:
             driver = self.driver
