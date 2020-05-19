@@ -5,11 +5,11 @@ import pytest
 from pages.loginpage import loginpage
 from pages.homepage import homepage
 from utils import utils as util
-#import allure
+import allure
+import conftest
 
 @pytest.mark.usefixtures("test_setup")
 class TestLogin():
-
     def test_login(self):
         driver = self.driver
         driver.get(util.URL)
