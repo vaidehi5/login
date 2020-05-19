@@ -1,0 +1,3 @@
+no exception occured
+I am inside finally block
+test completed
